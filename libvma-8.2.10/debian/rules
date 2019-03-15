@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+%:
+	dh $@
+
+#override_dh_auto_clean:
+
+override_dh_auto_configure:
+	revision=1 ./configure --with-ofed=/usr --prefix=/usr --libdir=/usr/lib --includedir=/usr/include --sysconfdir=/etc
